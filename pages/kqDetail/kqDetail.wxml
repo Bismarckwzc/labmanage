@@ -1,0 +1,28 @@
+<view class='head'>
+  <text class='header'>考勤详情</text>
+</view>
+<view class='all'>
+  <view class='images'>
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" size='mini'> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+    </block>
+  </view>
+  <view class='info'>
+   <block wx:for="{{stu}}" wx:key="key">
+    <view class='char'>姓名：{{item.name}}</view>
+    <view class='char'>学号：{{item.idNum}}</view>
+    <view  class='char'>
+          <view wx:if="{{item.ischeckingin}}">已签到</view>
+          <view wx:if="{{!item.ischeckingin}}">未签到</view>
+          <view wx:if="{{item.ischeckingin}}">签到时间：{{item.checkinTime}}</view>
+     </view>
+     <view class='char'>
+          <view wx:if="{{item.ischeckingout}}">已签退</view>
+          <view wx:if="{{!item.ischeckingout}}">未签退</view>
+          <view wx:if="{{item.ischeckingout}}">签退时间：{{item.checkoutTime}}</view>
+          <view class='xian'></view>
+     </view>
+   </block>
+  </view>
+</view>

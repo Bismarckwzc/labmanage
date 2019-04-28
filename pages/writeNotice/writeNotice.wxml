@@ -1,0 +1,12 @@
+<!--pages/writeNotice/writeNotice.wxml-->
+<view class='head'>
+  <text class='header'>写公告</text>
+  <button class='btn'>发布</button>
+</view>
+<view class='hr'></view>
+<view class='first'>
+  <input class="write" placeholder='公告标题' bindinput='wNotice'></input>
+</view>
+<view class='xian'></view>
+<textarea class="detail" placeholder-class="phcolor" placeholder="公告正文" bindblur="bindTextAreaBlur" value="{{details}}"></textarea>
+

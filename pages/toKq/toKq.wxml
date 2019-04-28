@@ -1,0 +1,9 @@
+<view class='head'>
+  <text class='tex'>发布考勤</text>
+</view>
+  <view class='time'>
+    <view class='frist'>课堂时间：</view>
+    <view class='hr'></view>
+  </view>
+<button type='primary' bindtap='shengcheng'>生成</button>
+<image src='{{src}}'></image>

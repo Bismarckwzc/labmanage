@@ -1,0 +1,25 @@
+<!--pages/teaBind/teaBind.wxml-->
+<view class='head'>
+  <view>教师绑定</view>
+</view>
+<view class='hr'></view>
+<view class='tea'>
+      <view class='single'>
+        <view class='ac'>手机号</view>
+        <view class='ipt'>
+          <input name="account" type='text' class='placeholder-style' bindinput ="userPhoneInput"></input>
+        </view>
+        <!-- <button class='btn'>获取验证码</button> -->
+      </view>
+      <view class='hr'></view>
+      <!-- <view class='single'>
+        <view class='ac'>验证码</view>
+        <view class='ipt'>
+          <input name="account" type='text' class='placeholder-style' bindinput ="verficCodeInput"></input>
+        </view>
+      </view> -->
+      <view class='hr'></view>
+    </view>
+    <view class='comfirm'>
+      <button class='comTea' type='primary' bindtap="loginBtnClick1" size="mini">绑定</button>
+    </view>

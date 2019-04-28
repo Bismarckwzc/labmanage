@@ -1,0 +1,48 @@
+.head {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  height: 50px;
+  background-color: #455a64;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  z-index: 2;
+}
+.tex {
+  font-size: 18px;
+  margin: 10px;
+}
+.notice{
+  font-size: 16px;
+  height: 100px;
+  background-color: white;
+  color: black;
+  margin-top: 50px;
+  border-radius: 3px;
+  padding:5px;
+  position: relative;
+  z-index: 1;
+}
+.frist{
+  font-size: 20px;
+}
+.second{
+  font-size: 13px;
+}
+.hr{
+  width: 100%;
+  margin-top: 5px;
+  background:rgb(204, 202, 202);
+  height: 2px;
+}
+.thrid{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.fourth{
+  display: flex;
+  justify-content: space-between;
+}

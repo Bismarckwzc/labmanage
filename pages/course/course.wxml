@@ -1,0 +1,31 @@
+<!--pages/course/course.wxml-->
+<block wx:if="{{!isTea}}">
+  <view class='head'>
+    <view class='tex'>课堂</view>
+    <navigator url='/pages/addCou/addCou'>
+      <!--页面跳转 -->
+      <view class='addCou'>加入课堂</view>
+    </navigator>
+  </view>
+</block>
+<view class='jiange'></view>
+<block wx:for="{{course}}" wx:key="key">
+  <view class='course' bindtap='goToCour' data-couid='{{item.id}}'>
+    <!--点击进入选中课堂 -->
+    <view class='fir'>
+      <view class='couName'>{{item.couName}}</view>
+      <view class='menu'>┇</view>
+    </view>
+    <view class='sec'>
+      <view class='character'>角色:学生</view>
+      <view class='character'>教师:{{item.teaName}}</view>
+    </view>
+    <view class='thi'>
+      <view class='num'>{{item.perNum}} 位学员</view>
+      <view class='couId'>{{item.id}}</view>
+    </view>
+  </view>
+</block>
+<block wx:if="{{isTea}}">
+  laoshi shijiao
+</block>

@@ -1,0 +1,25 @@
+<!--pages/reset/reset.wxml-->
+<view class='head'>
+  <text class='header'>编辑资料</text>
+  <button class='btn'>保存</button>
+</view>
+<view class='single-fir'>
+  <view class='cahr'>姓名</view>
+  <input class="rename" placeholder-class="phcolor" placeholder='输入名字'  bindinput='setName'></input>
+</view>
+<view class='xian'></view>
+<view class='single'>
+  <view class='cahr'>学号</view>
+  <input class="rename" placeholder-class="phcolor" placeholder='输入名字'  bindinput='setID'></input>
+</view>
+<view class='xian'></view>
+<view class='single'>
+  <view class='cahr'>专业</view>
+  <input class="rename" placeholder-class="phcolor" placeholder='输入名字'  bindinput='setSpecialty'></input>
+</view>
+<view class='xian'></view>
+<view class='single'>
+  <view class='cahr'>班级</view>
+  <input class="rename" placeholder-class="phcolor" placeholder='输入名字'  bindinput='setClass'></input>
+</view>
+<view class='xian'></view>

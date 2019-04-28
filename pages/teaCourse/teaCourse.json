@@ -1,0 +1,15 @@
+{
+  "usingComponents": {},
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/teaCourse/teaCourse",
+        "text": "课程"
+      },
+      {
+        "pagePath": "pages/teaInfo/teaInfo",
+        "text": "我的"
+      }
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+<!--pages/addCou/addCou.wxml-->
+<view class='reminder'>
+  <text>通过六位邀请码加入课堂</text>
+</view>
+<view class='head'>
+  <input class='codeInp' placeholder='请输入六位邀请码' bindinput='codeInp'></input>
+</view>
+<view class='buttC'>
+  <button class='butt' type='primary' bindtap='addCourse'>确 认</button>
+</view>

@@ -1,0 +1,38 @@
+<!--pages/collGrade/collGrade.wxml-->
+<view class='head'>
+  <text>unix{{courName}}</text>
+</view>
+<scroll-view scroll-x="true" scroll-y="true">
+  <view class='tr_2 head_'>
+    <view class='td_name'>组名</view>
+    <view class='td_name_2'>姓名</view>
+    <block wx:for="{{courseData[0].child[0].grade}}">
+      <view class='td'>{{item.exId}}</view>
+    </block>
+    <view class='td'>出勤</view>
+  </view>
+  <block wx:for="{{courseData}}" wx:for-index="gindex">
+    <view class='tr'>
+      <view class='td_name'>
+        <text>{{item.name}}</text>
+      </view>
+      <view class='co'>
+        <block wx:for="{{item.child}}" wx:for-item="item_child" wx:for-index="pindex">
+          <view class='ro'>
+            <view class='td_name_2'>
+              <text>{{item_child.stuName}}</text>
+            </view>
+            <block wx:for="{{item_child.grade}}" wx:for-item="item_grade" wx:for-index="grindex">
+              <view class='td'>
+                <input value='{{item_grade.grade}}' bindinput='setGrade'  data-gindex='{{gindex}}' data-pindex="{{pindex}}" data-grindex='{{grindex}}'></input>
+              </view>
+            </block>
+            <view class='td'>{{item_child.signNum}}</view>
+          </view>
+        </block>
+      </view>
+    </view>
+    <view class='line'></view>
+  </block>
+</scroll-view>
+<button type='primary' bindtap='sub'>提交</button>

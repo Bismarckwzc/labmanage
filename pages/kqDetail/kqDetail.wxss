@@ -1,0 +1,94 @@
+/* pages/me/me.wxss */
+
+.head {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  height: 50px;
+  background-color: #455a64;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: white;
+  z-index: 2;
+}
+
+.header {
+  margin-left: 10px;
+}
+
+.hr {
+  margin-top: 5px;
+  background: #ddd;
+  height: 4px;
+}
+.btn {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 90px;
+  font-size: 12px;
+  color: #666;
+  background-color: #f2f2f2;
+}
+.all {
+  height: 90px;
+  background-color: white;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 10px;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+.info {
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  margin-top: 5px;
+}
+
+.char {
+  margin-top: 2px;
+  font-size: 12px;
+  color: lightslategray;
+}
+.kqTime {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 2px;
+  font-size: 12px;
+  color: lightslategray;
+  margin: 5px;
+  align-items: center;
+}
+
+
+.single {
+  height: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px;
+}
+
+.xian {
+  margin-top: 5px;
+  background: rgb(36, 34, 34);
+  height: 2px;
+}
+
+.chara {
+  font-size: 14px;
+  margin-left: 5px;
+  vertical-align: middle;
+}

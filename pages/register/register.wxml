@@ -1,0 +1,60 @@
+<!--pages/register/register.wxml-->
+<view class='regTitle'>
+  <view class="{{flag==0? 'select':'default'}}" id="0" bindtap='switchNav'>教师注册</view>
+  <view class="{{flag==1? 'select':'default'}}" id="1" bindtap='switchNav'>学生注册</view>
+</view>
+<view class='hr'></view>
+<swiper current='{{curTab}}' style="height:{{winHeight}}px">
+  <swiper-item>
+    <view class='tea'>
+      <view class='single'>
+        <view class='ac'>姓名</view>
+        <view class='ipt'>
+          <input name="account" type='text' class='placeholder-style' placeholder="输入姓名" bindinput ="teaNameInput"></input>
+        </view>
+      </view>
+      <view class='hr'></view>
+    </view>
+    <view class='comfirm'>
+      <button class='comTea' type='primary' bindtap="loginBtnClick1" size="mini">注册</button>
+    </view>
+  </swiper-item>
+  <swiper-item>
+    <view class='stu'>
+      <view class='single'>
+        <view class='ac'>姓名</view>
+        <view class='ipt'>
+          <input name="account" type='text' placeholder="输入姓名" class='placeholder-style'bindinput ="userNameInput"></input>
+        </view>
+      </view>
+      <view class='hr'></view>
+      <view class='single'>
+        <view class='ac'>学号</view>
+        <view class='ipt'>
+          <input name="account" type='text' placeholder="输入学号" class='placeholder-style'bindinput ="userNumInput"></input>
+        </view>
+      </view>
+      <view class='hr'></view>
+      <view class='single'>
+        <view class='ac'>专业</view>
+        <view class='ipt'>
+          <input name="account"  type='text' placeholder="输入专业" class='placeholder-style'bindinput ="userMajorInput"></input>
+           <!-- bindblur='accountBlur' -->
+        </view>
+      </view>
+      <view class='hr'></view>
+      <view class='single'>
+        <view class='ac'>班级</view>
+        <view class='ipt'>
+          <input name="account"  type='text'  placeholder="输入班级" class='placeholder-style'bindinput ="userClassInput"></input>
+          <!-- bindblur='accountBlur' -->
+        </view>
+      </view>
+      <view class='hr'></view>
+    </view>
+    <view class='comfirm'>
+      <button class='comStu' type='primary' bindtap="loginBtnClick2" size="mini">注册</button>
+      <!-- <button bindtap='goTofz'>跳转</button> -->
+    </view>
+  </swiper-item>
+</swiper>

@@ -1,0 +1,42 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/teaBind/teaBind",
+    "pages/register/register",
+    "pages/teaCourDetail/teaCourDetail",
+    "pages/courDetail/courDetail",
+    "pages/teaCourse/teaCourse",
+    "pages/course/course",
+    "pages/me/me",
+    "pages/toKq/toKq",
+    "pages/kqDetail/kqDetail",
+    "pages/collGrade/collGrade",
+    "pages/writeNotice/writeNotice",
+    "pages/test/test",
+    "pages/reset/reset",
+    "pages/notice/notice",
+    "pages/ingro/ingro",
+    "pages/addCou/addCou",
+    "pages/createCou/createCou",
+    "pages/teaInfo/teaInfo"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "white",
+    "navigationBarTitleText": "实验室管理",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/course/course",
+        "text": "课程"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我的"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

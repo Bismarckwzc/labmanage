@@ -1,0 +1,30 @@
+/* pages/addCou/addCou.wxss */
+
+.reminder {
+  display: flex;
+  justify-content: center;
+  color: rgb(45, 145, 20);
+}
+
+.head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  margin: 15px;
+  border-radius: 5px;
+  background-color: lightgray;
+}
+.codeInp{
+  width: 95%;
+  height: 25px;
+}
+.buttC{
+  height: 30px;
+  align-items: center;
+  justify-content: center;
+}
+.butt{
+  width: 80%;
+  
+}

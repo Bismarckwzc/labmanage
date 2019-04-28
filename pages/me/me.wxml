@@ -1,0 +1,58 @@
+<!--pages/me/me.wxml-->
+<view class='head'>
+  <text class='header'>个人资料</text>
+  <navigator url='/pages/reset/reset'>
+    <!--页面跳转 -->
+    <button class='btn'>编辑资料</button>
+  </navigator>
+</view>
+<view class='all'>
+  <view class='images'>
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" size='mini'> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+    </block>
+  </view>
+  <view class='info'>
+    <view class='char'>黄茜</view>
+    <view class='char'>专业：计科</view>
+    <view class='char'>班级：1603</view>
+    <view class='char'>20160901</view>
+  </view>
+</view>
+<view class='hr'></view>
+<navigator url='/pages/reset/reset'>
+  <view class='single'>
+    <view class='chara'>加入课堂数</view>
+    <view class='chara'>5</view>
+  </view>
+</navigator>
+<view class='xian'></view>
+
+<view class='single' bindtap='reset'>
+  <view class='chara'>姓名</view>
+  <view class='chara'>{{name}}</view>
+</view>
+
+<view class='xian'></view>
+
+<view class='single' bindtap='reset'>
+  <view class='chara'>学号</view>
+  <view class='chara'>{{id}}</view>
+</view>
+
+<view class='xian'></view>
+
+<view class='single' bindtap='reset'>
+  <view class='chara'>专业</view>
+  <view class='chara'>{{specialty}}</view>
+</view>
+
+<view class='xian'></view>
+
+<view class='single' bindtap='reset'>
+  <view class='chara'>班级</view>
+  <view class='chara'>{{classNa}}</view>
+</view>
+
+<view class='xian'></view>

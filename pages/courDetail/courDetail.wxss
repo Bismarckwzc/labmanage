@@ -1,0 +1,270 @@
+/* pages/courDetail/courDetail.wxss */
+
+.head {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  height: 50px;
+  background-color: #455a64;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  z-index: 2;
+}
+
+/* 分组 */
+
+.fzfrist {
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px;
+  display: flex;
+  flex-direction: row;
+  font-size: 12px;
+}
+
+.fzlast {
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px;
+  display: flex;
+  flex-direction: row;
+  font-size: 12px;
+}
+.btn{
+  right: 10px;
+  top: 10px;
+  width: 90px;
+  font-size: 12px;
+  color: #666;
+  background-color: #f2f2f2;
+}
+/* 考勤 */
+
+.checkingTitle {
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+}
+
+.kqfrist {
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px;
+  display: flex;
+  flex-direction: row;
+  font-size: 14px;
+}
+
+.kqSecond {
+  display: flex;
+  flex-direction: row;
+  margin: 5px;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+}
+
+.select {
+  font-size: 14px;
+  font-weight: bold;
+  width: 20%;
+  text-align: center;
+  height: 45px;
+  line-height: 45px;
+  border-bottom: 5rpx solid #000;
+}
+
+.normal {
+  width: 20%;
+  font-size: 12px;
+  text-align: center;
+  height: 45px;
+  line-height: 45px;
+}
+
+.notice {
+  height: 100px;
+  background-color: white;
+  color: black;
+  /* margin-top: 100px; */
+  border-radius: 3px;
+  position: relative;
+  z-index: 1;
+}
+
+.hr {
+  margin-top: 50px;
+  background: #ddd;
+  height: 4px;
+}
+
+.xian {
+  margin-top: 3px;
+  background: #ddd;
+  height: 3px;
+}
+
+.phone_one {
+  height: 50px;
+  position: relative;
+}
+
+.personal_image {
+  z-index: 100;
+  position: absolute;
+  right: 2.5%;
+  width: 34rpx;
+  height: 20rpx;
+  margin: 40rpx 20rpx 40rpx 0;
+  transition: All 0.4s ease;
+  -webkit-transition: All 0.4s ease;
+}
+
+/* .person_box{
+    position: relative;
+} */
+
+.phone_select {
+  margin-top: 0;
+  z-index: 100;
+  /* position: absolute;  *//* 小程序中z-index和absolute需要同时存在，元素才能脱离文档。 */
+}
+
+.single {
+  display: flex;
+  flex-direction: row;
+  height: 40px;
+  background-color: rgb(228, 220, 220);
+}
+
+.men_left {
+  width: 100rpx;
+  height: 100rpx;
+  margin: 10px;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+.men_right {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+.char {
+  font-size: 10px;
+}
+
+.rotateRight {
+  transform: rotate(180deg);
+  /* 180°旋转图片。 */
+}
+
+.teac {
+  height: 40px;
+  margin-left: 10px;
+  line-height: 40px;
+}
+
+.signNum {
+  margin-top: 5px;
+  font-size: 14px;
+  height: 40px;
+}
+
+.buju {
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+  height: 40px;
+}
+
+.left {
+  display: flex;
+  flex-direction: row;
+  width: 70%;
+}
+
+.date {
+  font-size: 14px;
+}
+
+.time {
+  font-size: 10px;
+}
+
+.right {
+  font-size: 14px;
+  color: green;
+  line-height: 40px;
+}
+
+.zongti {
+  height: 50px;
+  margin-top: 47px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 50px;
+  background-color: rgba(197, 196, 196, 0.329);
+}
+
+.describe {
+  margin-left: 5px;
+  height: 35px;
+  line-height: 35px;
+  font-size: 12px;
+}
+
+.title {
+  height: 35px;
+  background-color: rgba(197, 196, 196, 0.329);
+  line-height: 35px;
+}
+
+.getOut {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: rgb(137, 170, 167);
+  color: white;
+  z-index: 200;
+}
+
+.first {
+  font-size: 14px;
+  margin-left: 5px;
+}
+
+.second {
+  display: flex;
+  flex-direction: row;
+  font-size: 12px;
+  color: rgb(126, 124, 124);
+  margin-left: 5px;
+}
+
+.third {
+  margin-left: 5px;
+}
+
+.forth {
+  width: 100%;
+  margin-left: 300px;
+  font-size: 12px;
+}
+
+.scanner {
+  margin-top: 100px;
+  text-align: center;
+}

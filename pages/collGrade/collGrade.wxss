@@ -1,0 +1,71 @@
+/* pages/collGrade/collGrade.wxss */
+
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tr {
+  display: flex;
+  flex-direction: row;
+  width: 200%;
+  height: 60px;
+}
+
+.tr_2 {
+  display: flex;
+  flex-direction: row;
+  width: 200%;
+}
+
+.td {
+  display: flex;
+  width: 50px;
+}
+
+.td_name {
+  width: 15%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.td_name_2 {
+  width: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.line {
+  background-color: lightgray;
+  height: 1rpx;
+  width: 200%;
+}
+
+.head_ {
+  background-color: gray;
+  color: white;
+}
+
+.ro {
+  display: flex;
+  flex-direction: row;
+  width: 180%;
+}
+
+.co {
+  display: flex;
+  flex-direction: column;
+}
+
+.stuName {
+  width: 70px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

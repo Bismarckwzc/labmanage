@@ -1,0 +1,99 @@
+/* pages/course/course.wxss */
+
+.head {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  height: 50px;
+  background-color: #455a64;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  z-index: 2;
+}
+.hang{
+   display: flex;
+  flex-direction: row;
+}
+.jiange {
+  margin-top: 55px;
+  background: #ddd;
+  height: 4px;
+}
+
+.tex {
+  font-size: 20px;
+  margin: 10px;
+}
+
+.addCou {
+  margin: 10px;
+}
+
+.guidang {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 55px;
+}
+
+.contain_1 {
+  display: flex;
+  flex-direction: row;
+  margin: 5px;
+}
+
+.icon {
+  height: 20px;
+  width: 20px;
+}
+
+.hr {
+  margin-top: 5px;
+  background: #ddd;
+  height: 4px;
+}
+
+.course {
+  height: 160px;
+  background-color: gray;
+  color: white;
+  /* margin-top: 50px; */
+  margin: 5px;
+  border-radius: 3px;
+  position: relative;
+  z-index: 1;
+}
+
+.fir {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.sec {
+  display: flex;
+  flex-direction: row;
+  font-size: 13px;
+}
+
+.character {
+  margin: 10px;
+}
+
+.thi {
+  position: absolute;
+  bottom: 5px;
+  width: 93%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 13px;
+  margin-left: 10px;
+  margin-right: 10px;
+}

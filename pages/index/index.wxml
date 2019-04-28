@@ -1,0 +1,2 @@
+<button bindtap="wxlogin">登陆</button>
+<button bindtap="wxlogout">注销</button>

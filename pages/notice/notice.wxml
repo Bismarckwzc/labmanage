@@ -1,0 +1,17 @@
+<view class='head'>
+  <text class='tex'>{{noticeTitle}}</text>
+</view>
+<block>
+  <view class='notice'>
+    <view class='frist'>{{noticeTitle}}</view>
+    <view class='second'>发布人：{{teacher}}</view>
+    <view class='second'>发布时间：{{time}}</view>
+    <view class='hr'></view>
+    <view class='thrid'>{{content}}</view>
+    <view class='hr'></view>
+    <view class='fourth'>
+      <view class='second'>公告评论（条数：{{commentNum}}）</view>
+      <view class='second'>已阅读</view>
+    </view>
+  </view>
+</block>

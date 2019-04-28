@@ -1,0 +1,21 @@
+<!--pages/createCou/createCou.wxml-->
+<view class='head'>
+  <text class='header'>编辑课堂信息</text>
+  <button bindtap='loginBtnClick'>确认</button>
+</view>
+<view class='hr'></view>
+<view class='single-fir'>
+  <view class='cahr'>课堂名</view>
+  <input class="rename" placeholder-class="phcolor" placeholder='输入名字'  bindinput='setName'></input>
+</view>
+<view class='xian'></view>
+<view class='single-fir'>
+  <view class='cahr'>邀请码</view>
+  <input class="rename" placeholder-class="phcolor" placeholder='邀请码'  bindinput='setCode'></input>
+</view>
+<view class='xian'></view>
+<view class='single-fir'>
+  <view class='cahr'>教师</view>
+  <input class="rename" placeholder-class="phcolor" placeholder='输入姓字'  bindinput='setTeaName'></input>
+</view>
+<view class='xian'></view>

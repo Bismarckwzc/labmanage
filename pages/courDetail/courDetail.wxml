@@ -1,0 +1,174 @@
+<!--pages/courDetail/courDetail.wxml-->
+<block wx:if="{{isSign}}">
+  <button type='primary' bindtap='scan'>扫码签到</button>
+</block>
+<view class='head'>
+  <view class="{{flag==0?'select':'normal'}}" id="0" bindtap='switch_'>公告</view>
+  <view class="{{flag==1?'select':'normal'}}" id="1" bindtap='switch_'>成员</view>
+  <view class="{{flag==2?'select':'normal'}}" id="2" bindtap='switch_'>分组</view>
+  <view class="{{flag==3?'select':'normal'}}" id="3" bindtap='switch_'>考勤</view>
+  <view class="{{flag==4?'select':'normal'}}" id="4" bindtap='switch_'>扫码</view>
+  <!-- <view class="{{flag==3?'select':'normal'}}" id="5" bindtap='switch_'>签到</view> -->
+</view>
+<!-- 公告 -->
+<swiper calss='notice' current="{{curTab}}" style="height:800px">
+  <swiper-item>
+    <block wx:for="{{notice}}" wx:key="key">
+      <view class='notice' bindtap='goToNotice' data-couid='{{item.id}}'>
+        <view class='hr'></view>
+        <view class="first">{{item.noticeTitle}}</view>
+        <view class="second">发布人：{{item.teacher}}</view>
+        <view class="second">发布时间：{{item.time}}</view>
+        <view class="third">...</view>
+        <view class="forth">{{item.commentNum}}条评论</view>
+        <view class='xian'></view>
+      </view>
+    </block>
+  </swiper-item>
+  <!-- 成员面板 -->
+  <swiper-item>
+    <view class="member" data-couid='{{item.id}}'>
+      <view class="hr"></view>
+      <view class="phone_one" bindtap="clickPerson1">
+        <view class="teac" bindtap="goteacher">教学团队（{{teacherNum}}）</view>
+        <!-- <image src="../../image/v6.png" class="personal_image {{selectArea ? 'rotateRight' :''}}"></image> -->
+      </view>
+      <view class='xian'></view>
+      <view class="person_box">
+        <view class="phone_select" hidden="{{selectPerson1}}">
+          <block wx:for="{{tea}}" wx:key="key">
+            <view class='single'>
+              <view class='men_left'>
+                <!-- <image src='{{teaImage}}'></image> -->
+              </view>
+              <view class='men_right'>
+                <view class='char'>{{item.name}}</view>
+                <view class='char'>{{item.phone}}</view>
+              </view>
+            </view>
+            <view class='xian'></view>
+          </block>
+        </view>
+      </view>
+      <view class="xian"></view>
+      <view class="phone_one" bindtap="clickPerson2">
+        <view class="teac" bindtap="goteacher">全部学生（{{teacherNum}}）</view>
+        <!-- <image src="../../image/v6.png" class="personal_image {{selectArea ? 'rotateRight' :''}}"></image> -->
+      </view>
+      <view class='xian'></view>
+      <view class="person_box">
+        <view class="phone_select" hidden="{{selectPerson2}}">
+          <block wx:for="{{stu}}" wx:key="key">
+            <view class='single'>
+              <view class='men_left'>
+                <!-- <image src='{{stuImage}}'></image> -->
+              </view>
+              <view class='men_right'>
+                <view class='char'>姓名：{{item.userName}}</view>
+                <view class='char'>学号: {{item.userNum}}</view>
+              </view>
+            </view>
+            <view class='xian'></view>
+          </block>
+        </view>
+      </view>
+      <view class="xian"></view>
+    </view>
+  </swiper-item>
+  <!-- 分组 -->
+  <swiper-item>
+    <view class="hr"></view>
+    <view class="fzfrist">
+      <block wx:for="{{groupsNum}}" wx:key="key">
+        <view class='totalTxt'>已分组人数：{{item.ingroNum}}</view>
+        <view class='totalTxt'>未分组人数：{{item.outgroNum}}</view>
+      </block>
+    </view>
+    <view class='xian'></view>
+    <view class='mine'>
+      <view class='describe' bindtap="clickGro1">我加入的组</view>
+      <view class='xian'></view>
+      <view hidden="{{selectGro1}}">
+        <block wx:for="{{ingroup}}" wx:key="key">
+          <view class='title' bindtap="clickGro4">
+            <view class='describe'>{{item.name}}</view>
+          </view>
+          <view class='xian'></view>
+          <view hidden="{{selectGro4}}">
+            <block wx:for="{{item.member}}" wx:key="key">
+              <view class='describe'>{{item.name}}</view>
+            </block>
+          </view>
+        </block>
+      </view>
+    </view>
+    <view class='describe' bindtap="clickGro2">其他分组</view>
+    <view class='xian'></view>
+    <view hidden="{{selectGro2}}">
+      <block wx:for="{{groups}}" wx:key="key">
+        <view class='title' bindtap="clickGro3" data-selectgro3='{{item.selectGro3}}' data-couid='{{item.id}}'>
+          <view class='describe'>{{item.name}}</view>
+        </view>
+        <view class='xian'></view>
+        <view hidden="{{item.selectGro3}}">
+          <block wx:for="{{item.member}}" wx:key="key">
+            <view class='describe'>{{item.name}}</view>
+          </block>
+        </view>
+      </block>
+    </view>
+    <view class='fzlast'>
+      <button class='btn' bindtap='goTofz' bindtap='goTofz'>加入分组</button>
+      <button class='btn'>退出分组</button>
+    </view>
+  </swiper-item>
+  <!-- 考勤 -->
+  <swiper-item>
+    <view class="hr"></view>
+    <block wx:for="{{checkingIn}}" wx:key="key">
+      <view class='kqcheckingTitle'>
+        <view class='kqfrist'>
+          <view>时间:{{ m1.format(item.attendArriveTime) }}</view>
+          <view>第{{item.courNum}}节课</view>
+          <view>课程名称:{{courseName}}</view>
+        </view>
+        <view class='kqSecond'>
+          <view wx:if="{{item.ischeckingin}}">已签到</view>
+          <view wx:if="{{!item.ischeckingin}}">未签到</view>
+          <view wx:if="{{item.ischeckingin}}">签到时间：{{ m2.format(item.attendArriveTime) }}</view>
+        </view>
+        <view class='kqSecond'>
+          <view wx:if="{{item.ischeckingout}}">已签退</view>
+          <view wx:if="{{!item.ischeckingout}}">未签退</view>
+          <view wx:if="{{item.ischeckingout}}">签退时间：{{ m2.format(item.attendLeaveTime) }}</view>
+        </view>
+      </view>
+      <view class='xian'></view>
+    </block>
+  </swiper-item>
+  <swiper-item>
+    <view class='scanner'>
+      <button type='primary' bindtap='scan1' size="mini">考勤扫码</button>
+    </view>
+  </swiper-item>
+</swiper>
+<view class='getOut'>
+  <text>退出\n课堂</text>
+</view>
+<!-- <view wx:if="{{isTeacher}}" class=' roundClick '>
+  <text>发布\n通知</text>
+</view> -->
+<wxs module="m1">
+  function format(ts) {
+    var d = getDate(ts)
+    return [d.getFullYear(), d.getMonth()+1, d.getDate()].join('-')
+  }
+  module.exports.format = format
+</wxs>
+<wxs module="m2">
+  function format(ts) {
+    var d = getDate(ts)
+    return [d.getHours(), d.getMinutes(), d.getSeconds()].join(':')
+  }
+  module.exports.format = format
+</wxs>
